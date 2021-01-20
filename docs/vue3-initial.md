@@ -2,7 +2,7 @@
 
 > 建立並準備 Vue 3 的開發環境
 
-### 安裝指令`(Global)`
+## 安裝指令`(Global)`
 <!-- tabs:start -->
 #### ** Yarn **
 ```
@@ -13,7 +13,7 @@ yarn global add @vue/cli
 npm install -g @vue/cli
 ```
 <!-- tabs:end -->
-### 檢查安裝版本是否正確
+## 檢查安裝版本是否正確
 ```
 vue --version
 
@@ -21,7 +21,7 @@ vue --version
 
 vue -V
 ```
-### Init Project
+## Init Project
 ```
 vue create project-name
 ```
@@ -34,7 +34,7 @@ Manually select features
 ```
 3.x (Preview)
 ```
-### 運行
+## 運行
 <!-- tabs:start -->
 #### ** Yarn **
 ```

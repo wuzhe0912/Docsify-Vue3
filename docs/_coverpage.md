@@ -4,4 +4,4 @@
 
 > 記錄語法觀念與實作的筆記
 
-[Get Started](#docsify)
+[Get Started](#Docsify)
