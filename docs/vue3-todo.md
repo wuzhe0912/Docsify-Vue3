@@ -6,7 +6,7 @@
 這邊我們切換到初始化專案中的`about`頁面實驗，先準備一個`template`：
 ```
 <template lang="pug">
-.about-container
+.container
   form.todo-form
     label New Todo List
     .btn-wrap
@@ -17,7 +17,7 @@
 然後簡單寫一些樣式：
 ```
 <style lang="scss" scoped>
-.about-container {
+.container {
   display: flex;
   justify-content: center;
 }
