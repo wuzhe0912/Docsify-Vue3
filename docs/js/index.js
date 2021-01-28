@@ -1,6 +1,6 @@
 window.$docsify = {
   name: 'docsify',
-  repo: 'https://github.com/wuzhe0912/docsify-vue',
+  repo: 'https://github.com/wuzhe0912/docsify-note',
   // open coverpage
   coverpage: true,
   logo: '/_media/icon.svg',
