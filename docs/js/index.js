@@ -12,6 +12,7 @@ window.$docsify = {
   maxLevel: 6,
   subMaxLevel: 3,
   sidebarDisplayLevel: 1,
+  auto2top: true,  // 當 router 改變時，回到頁面頂部
   tabs: {
     persist    : true,      // default
     sync       : true,      // default

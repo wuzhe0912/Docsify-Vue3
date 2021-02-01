@@ -4,13 +4,12 @@
 
 > 語法觀念與實作的筆記
 
-<span id="busuanzi_container_site_pv">
-  👀 Total Views：<span id="busuanzi_value_site_pv"></span>
-</span>
-<br>
-<span id="busuanzi_container_site_uv">
-  🚴‍♂️ Total Visitors：<span id="busuanzi_value_site_uv"></span>
-</span>
+<p>
+  👀 總到訪量：<span id="busuanzi_value_site_pv"></span>
+</p>
+<p>
+  🚴‍♂️ 總訪問人數：<span id="busuanzi_value_site_uv"></span>
+</p>
 
 [GitHub](https://github.com/wuzhe0912/docsify-note)
 [Get Started](#Docsify)
