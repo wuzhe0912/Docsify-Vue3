@@ -10,6 +10,8 @@
   <!-- Themes change -->
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css"> -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 </head>
 <body>
   <div id="app"></div>
@@ -52,5 +54,23 @@
     };
   </script>
   <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+  <!-- Sidebar Collapse -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- Gitalk -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '49e360f1c3a5006fb8c6',
+      clientSecret: '7cdcc9b9bd67063524d4049864cd9458321f0868',
+      repo: 'docsify-note',
+      owner: 'wuzhe0912',
+      admin: ['wuzhe0912'],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    });
+  </script>
+  <!-- Footer -->
+  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
 </body>
 </html>
