@@ -6,8 +6,8 @@ window.$docsify = {
   logo: '/_media/icon.svg',
   loadSidebar: true,
   auto2top: true,
-  maxLevel: 4,
-  subMaxLevel: 2,
+  maxLevel: 6,
+  subMaxLevel: 3,
   tabs: {
     persist    : true,      // default
     sync       : true,      // default
