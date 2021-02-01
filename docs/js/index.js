@@ -16,3 +16,9 @@ window.$docsify = {
     tabHeadings: true       // default
   }
 };
+// Google Analytics
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-MMW5V7NW8N');
