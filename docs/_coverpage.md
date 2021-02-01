@@ -2,7 +2,7 @@
 
 # Docsify <small>© 2021 Pitt</small>
 
-> 語法觀念與實作的筆記
+> 紀錄工作與學習使用的筆記
 
 <p>
   👀 總到訪量：<span id="busuanzi_value_site_pv"></span>
