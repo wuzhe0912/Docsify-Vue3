@@ -157,4 +157,95 @@ function App() {
 
 export default App;
 ```
-假設我若想添加一些限制條件，譬如
+假設我若想添加一些限制條件，譬如我希望當數值超過`8`時，向上箭頭清除，小於`0`時，則清除向下箭頭，這種判斷條件同樣也能寫在`JSX`中：
+```
+<!-- 調整預設值為4 -->
+const [count, setCount] = useState(4);
+
+<div className="counter__container">
+  {
+    count < 8 && (
+      <i className="cheveron cheveron__up" onClick={ addNumber } />
+    )
+  }
+  <span style={ number }>{ count }</span>
+  {
+    count > 0 && (
+      <i className="cheveron cheveron__down" onClick={ cutNumber } />
+    )
+  }
+</div>
+```
+除了上面這種清除`DOM`元素作法，還有使用`CSS`來隱藏也是可行：
+```
+<div className="counter__container">
+  <i
+    className="cheveron cheveron__up"
+    style={{
+      visibility: count >= 8 && 'hidden',
+    }}
+    onClick={ addNumber }
+  />
+  <span style={ number }>{ count }</span>
+  <i
+    className="cheveron cheveron__down"
+    style={{
+      display: count <= 0 && 'none',
+    }}
+    onClick={ cutNumber }
+  />
+</div>
+```
+此外，也可以改成綁定`class`的方式：
+```
+<!-- css -->
+.visibility-hidden {
+  visibility: hidden;
+}
+.display-none {
+  display: none;
+}
+```
+```
+<!-- js -->
+<div className="counter__container">
+  <i
+    className={`cheveron cheveron__up ${count >= 8 && 'display-none'}`}
+    onClick={ addNumber }
+  />
+  <span style={ number }>{ count }</span>
+  <i
+    className={`cheveron cheveron__down ${count <= 0 && 'visibility-hidden'}`}
+    onClick={ cutNumber }
+  />
+</div>
+```
+再來，因為我們現在有兩組`click`事件，假設我們需要合併在一起，透過傳參的方式來決定觸發的內容。在`JSX`這邊不可以直接寫`{function()}`會造成無窮迴圈，所以必須用一個`function`去包：
+```
+const handleClick = (type) =>
+  setCount(type === 'increment' ? count + 1 : count - 1);
+```
+```
+<i
+  className={`cheveron cheveron__up ${count >= 8 && 'display-none'}`}
+  onClick={ () => handleClick('increment') }
+/>
+```
+## JSX 中使用迴圈
+建立一個帶有多元素的陣列：
+```
+<!-- 回到 index.js -->
+const couters = Array.from({ length: 3 });
+
+ReactDOM.render(
+  <React.StrictMode>
+    {
+      couters.map((item, index) => {
+        return <App key={index} />
+      })
+    }
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+雖然理論上，不應該使用`index`當作`key`值，但考慮這邊僅是練習，就不這麼嚴謹設定了。
