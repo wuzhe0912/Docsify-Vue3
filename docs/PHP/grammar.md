@@ -139,7 +139,7 @@ $float = (integer) $float; // 12
 <?php
   $count = 0;
   while ($count < 10) {
-    echo($count."\n\r");
+    echo($count."\r\n");
     $count ++;
   }
 ```
@@ -148,7 +148,7 @@ $float = (integer) $float; // 12
 ```
 <?php
   for ($count = 1; $count < 13; $count++) {
-    echo($count."\n\r");
+    echo($count."\r\n");
   }
 ```
 將指定數字內，奇數加總總和：
@@ -220,7 +220,7 @@ Array
 <?php
   $list = ['Ragnarok', 'Black Desert', 'League of Legends', 'Lineage'];
   foreach ($list as $index => $game) {
-    echo("第{$index}個遊戲：{$game}"."\n\r");
+    echo("第{$index}個遊戲：{$game}"."\r\n");
   }
 ```
 如果陣列改為字典式陣列，則寫法調整為對應欄位：
@@ -233,6 +233,95 @@ Array
     ['name' => 'Lineage']
   ];
   foreach ($list as $index => $game) {
-    echo("第{$index}個遊戲：{$game['name']}"."\n\r");
+    echo("第{$index}個遊戲：{$game['name']}"."\r\n");
   }
 ```
+實作一，建立一組陣列，並在其中塞入五張獲利的股票，計算平均每張獲利，以及總獲利：
+```
+<?php
+  $stocks = [
+    ['profit' => 5],
+    ['profit' => 10],
+    ['profit' => 20],
+    ['profit' => 33],
+    ['profit' => 17]
+  ];
+  $totalProfit = 0;
+  foreach ($stocks as $index => $value) {
+    $totalProfit = $totalProfit + $value['profit'];
+  }
+  echo($totalProfit); // 總獲利：85
+  $stocksLength = count($stocks);
+  $perProfit = $totalProfit / $stocksLength;
+  echo($perProfit); // 平均每張獲利：17
+```
+實作二，建立一組陣列，裡面有五位操盤手，依據每個人績效`x10000`，做為獎金發放，其中要有一個人無績效，並顯示對應文字：
+```
+<?php
+  $people = [
+    [ 'name' => 'Alice', 'performance' => '120%' ],
+    [ 'name' => 'Olive', 'performance' => '150%' ],
+    [ 'name' => 'Mavis', 'performance' => '67%' ],
+    [ 'name' => 'Lena', 'performance' => '250%' ],
+    [ 'name' => 'Alyssa', 'performance' => null ]
+  ];
+  foreach ($people as $index => $value) {
+    $text = substr($value['performance'], 0, -1);
+    $bonus = (((float) $text) / 100) * 10000;
+    if ($text) {
+      echo("{$value['name']}獎金：{$bonus}元"."\r\n");
+    } else {
+      echo("{$value['name']}：沒有績效資料");
+    }
+  }
+```
+使用`substr`清除字串最後一個字元，印出下列結果：
+```
+Alice獎金：12000元
+Olive獎金：15000元
+Mavis獎金：6700元
+Lena獎金：25000元
+Alyssa：沒有績效資料
+```
+第二個情境，假設陣列結構調整為如下：
+```
+<?php
+  $girls = ['Alice', 'Olive', 'Mavis', 'Lena', 'Alyssa'];
+  $report = [
+    'Alice' => 1.2,
+    'Olive' => 1.5,
+    'Mavis' => 0.67,
+    'Lena' => 2.5
+  ];
+```
+那麼迴圈的寫法就需要調整如下，使用`php`的[isset()](https://www.php.net/manual/en/function.isset.php)過濾：
+```
+<?php
+  $girls = ['Alice', 'Olive', 'Mavis', 'Lena', 'Alyssa'];
+  $report = [
+    'Alice' => 1.2,
+    'Olive' => 1.5,
+    'Mavis' => 0.67,
+    'Lena' => 2.5
+  ];
+  foreach ($girls as $index) {
+    $bonus = $report[$index] * 10000;
+    if (isset($report[$index])) {
+      echo("{$index}獎金：{$bonus}元\r\n");
+    } else {
+      echo("{$index}：沒有績效資料。");
+    }
+  }
+```
+## 關於閉合標籤
+在`php`中會看到兩種寫法：
+```
+<?php
+  echo('Hello PHP!');
+```
+```
+<?php
+  <h2>Hello PHP!</h2>
+?>
+```
+在單純只有`php`的程式時，譬如`echo()`不建議寫閉合標籤，但倘若當中嵌有`HTML`的`tag`時，則需要添加`?>`閉合標籤。

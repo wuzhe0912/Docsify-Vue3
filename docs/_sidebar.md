@@ -23,6 +23,11 @@
 
 - **PHP**
   - [環境安裝與基礎語法](PHP/grammar.md)
+  - [函式與物件](PHP/function-object.md)
+  - [PHP 陣列操作方法](PHP/array-operating.md)
+
+- **Laravel**
+  - [套件工具 Composer](Laravel/composer.md)
 
 - **WordPress**
   - [專案建立](WordPress/wp-mamp.md)
