@@ -2,6 +2,9 @@
   - **語法與實作**
     - [Counter(計數器)](JavaScript/js-counter.md)
 
+  - **需求解法**
+    - [重組多層陣列](JavaScript/Solution/array-operating.md)
+
   - **ES6**
     - [let & const(作用域)](JavaScript-ES6/let-const.md)
     - [Destructuring(解構賦值)](JavaScript-ES6/destructuring.md)
@@ -21,6 +24,9 @@
   - **React**
     - [React 基礎語法](React/grammar.md)
     - [實作網速單位轉換](React/speed.md)
+  
+  - **Node.js**
+    - [NVM 安裝](Node.js/nvm.md)
 
 - **PHP**
   - **語法與實作**
@@ -32,11 +38,11 @@
     - [套件工具 Composer](Laravel/composer.md)
 
   - **WordPress**
-    - [專案建立](WordPress/wp-mamp.md)
-
-- **Python**
+    - [專案建立](WordPress/init-project.md)
 
 - **MySQL**
+  - **語法與實作**
+    - [環境安裝](MySQL/install.md)
 
 - **IDE**
   - **Visual Studio Code**
