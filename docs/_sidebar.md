@@ -13,12 +13,14 @@
       - [Spread & Rest(展開與其餘)](FrontEnd/JavaScript/ES6/spread-rest.md)
       - [字符模板](FrontEnd/JavaScript/ES6/template-strings.md)
       - [ES Modules](FrontEnd/JavaScript/ES6/es-modules.md)
-  - **Vue.js 3.x**
-    - [Initial Project](FrontEnd/Vue.js(3.x)/initial.md)
-    - [Vue 3 基礎語法](FrontEnd/Vue.js(3.x)/grammar.md)
-    - [Todo App](FrontEnd/Vue.js(3.x)/todo.md)
-    - [Mouse Position](FrontEnd/Vue.js(3.x)/mouse-position.md)
-    - [串接 API (axios)](FrontEnd/Vue.js(3.x)/dog-api.md)
+  - **Vue.js**
+    - **2.x**
+    - **3.x**
+      - [Initial Project](FrontEnd/Vue.js/3.x/initial.md)
+      - [Vue 3 基礎語法](FrontEnd/Vue.js/3.x/grammar.md)
+      - [Todo App](FrontEnd/Vue.js/3.x/todo.md)
+      - [Mouse Position](FrontEnd/Vue.js/3.x/mouse-position.md)
+      - [串接 API (axios)](FrontEnd/Vue.js/3.x/dog-api.md)
   - **React**
     - [React 基礎語法](FrontEnd/React/grammar.md)
     - [實作網速單位轉換](FrontEnd/React/speed.md)
