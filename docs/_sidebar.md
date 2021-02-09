@@ -2,65 +2,67 @@
 - **FrontEnd**
   - **JavaScript**
     - **原生語法與實作**
-      - [Counter(計數器)](FrontEnd/JavaScript/Vanilla/js-counter.md)
+      - [**Counter(計數器)**](FrontEnd/JavaScript/Vanilla/js-counter.md)
     - **需求解法**
-      - [重組多層陣列](FrontEnd/JavaScript/Solution/array-operating.md)
+      - [**重組多層陣列**](FrontEnd/JavaScript/Solution/array-operating.md)
     - **ES6**
-      - [let & const(作用域)](FrontEnd/JavaScript/ES6/let-const.md)
-      - [Destructuring(解構賦值)](FrontEnd/JavaScript/ES6/destructuring.md)
-      - [Arrow Function(箭頭函式)](FrontEnd/JavaScript/ES6/arrow-function.md)
-      - [Function Default](FrontEnd/JavaScript/ES6/function-default.md)
-      - [Spread & Rest(展開與其餘)](FrontEnd/JavaScript/ES6/spread-rest.md)
-      - [字符模板](FrontEnd/JavaScript/ES6/template-strings.md)
-      - [ES Modules](FrontEnd/JavaScript/ES6/es-modules.md)
+      - [**let & const(作用域)**](FrontEnd/JavaScript/ES6/let-const.md)
+      - [**Destructuring(解構賦值)**](FrontEnd/JavaScript/ES6/destructuring.md)
+      - [**Arrow Function(箭頭函式)**](FrontEnd/JavaScript/ES6/arrow-function.md)
+      - [**Function Default**](FrontEnd/JavaScript/ES6/function-default.md)
+      - [**Spread & Rest(展開與其餘)**](FrontEnd/JavaScript/ES6/spread-rest.md)
+      - [**字符模板**](FrontEnd/JavaScript/ES6/template-strings.md)
+      - [**ES Modules**](FrontEnd/JavaScript/ES6/es-modules.md)
   - **Vue.js**
     - **2.x**
     - **3.x**
-      - [Initial Project](FrontEnd/Vue.js/3.x/initial.md)
-      - [Vue 3 基礎語法](FrontEnd/Vue.js/3.x/grammar.md)
-      - [Todo App](FrontEnd/Vue.js/3.x/todo.md)
-      - [Mouse Position](FrontEnd/Vue.js/3.x/mouse-position.md)
-      - [串接 API (axios)](FrontEnd/Vue.js/3.x/dog-api.md)
+      - [**Initial Project**](FrontEnd/Vue.js/3.x/initial.md)
+      - [**Vue 3 基礎語法**](FrontEnd/Vue.js/3.x/grammar.md)
+      - [**Todo App**](FrontEnd/Vue.js/3.x/todo.md)
+      - [**Mouse Position**](FrontEnd/Vue.js/3.x/mouse-position.md)
+      - [**串接 API (axios)**](FrontEnd/Vue.js/3.x/dog-api.md)
   - **React**
-    - [React 基礎語法](FrontEnd/React/grammar.md)
-    - [實作網速單位轉換](FrontEnd/React/speed.md)
+    - [**React 基礎語法**](FrontEnd/React/grammar.md)
+    - [**實作網速單位轉換**](FrontEnd/React/speed.md)
 <!-- 後端 -->
 - **BackEnd**
   - **Node.js**
-    - [NVM 安裝](BackEnd/Node.js/nvm.md)
+    - [**NVM 安裝**](BackEnd/Node.js/Vanilla/nvm.md)
+    - [**基礎語法**](BackEnd/Node.js/Vanilla/grammar.md)
   - **PHP**
     - **語法與實作**
-      - [環境安裝與基礎語法](BackEnd/PHP/Vanilla/grammar.md)
-      - [函式與物件](BackEnd/PHP/Vanilla/function-object.md)
-      - [PHP 陣列操作方法](BackEnd/PHP/Vanilla/array-operating.md)
+      - [**環境安裝與基礎語法**](BackEnd/PHP/Vanilla/grammar.md)
+      - [**函式與物件**](BackEnd/PHP/Vanilla/function-object.md)
+      - [**PHP 陣列操作方法**](BackEnd/PHP/Vanilla/array-operating.md)
     - **Laravel**
-      - [套件工具 Composer](BackEnd/PHP/Laravel/composer.md)
+      - [**Composer**](BackEnd/PHP/Laravel/composer.md)
+      - [**陣列操作**](BackEnd/PHP/Laravel/operating.md)
     - **WordPress**
-      - [專案建立](BackEnd/PHP/WordPress/init-project.md)
+      - [**專案建立**](BackEnd/PHP/WordPress/init-project.md)
 <!-- 資料庫 -->
 - **Database**
   - **MySQL**
     - **語法與實作**
-      - [環境安裝](DataBase/MySQL/install.md)
+      - [**環境安裝**](DataBase/MySQL/install.md)
 <!-- 編輯器 -->
 - **IDE**
   - **Visual Studio Code**
-    - [Setting](IDE/VSCode/vscode-setting.md)
+    - [**Setting**](IDE/VSCode/vscode-setting.md)
 <!-- 面試 -->
 - **FrontEnd Interview**
   - **Concept**
     - **HTML**
-      - [HTML - I](FrontEnd-Interview/HTML/html-I.md)
+      - [**HTML - I**](FrontEnd-Interview/HTML/html-I.md)
     - **CSS**
-      - [CSS - I](FrontEnd-Interview/CSS/css-I.md)
+      - [**CSS - I**](FrontEnd-Interview/CSS/css-I.md)
     - **Layout**
-      - [Layout - I](FrontEnd-Interview/Layout/layout-I.md)
+      - [**Layout - I**](FrontEnd-Interview/Layout/layout-I.md)
     - **JavaScript**
-      - [JavaScript - I](FrontEnd-Interview/JavaScript/javascript-I.md)
+      - [**JavaScript - I**](FrontEnd-Interview/JavaScript/javascript-I.md)
     - **Vue.js**
-      - [Vue.js 2.x - I](FrontEnd-Interview/Vue.js(2.x)/vue.js-I.md)
-      - [Vue.js 2.x - II](FrontEnd-Interview/Vue.js(2.x)/vue.js-II.md)
+      - [**Vue.js 2.x - I**](FrontEnd-Interview/Vue.js(2.x)/vue.js-I.md)
+      - [**Vue.js 2.x - II**](FrontEnd-Interview/Vue.js(2.x)/vue.js-II.md)
   - **Code**
-    - [Code Exam - I](FrontEnd-Interview/Code/code-I.md)
-    - [Code Exam - II](FrontEnd-Interview/Code/code-II.md)
-    - [Code Exam - III](FrontEnd-Interview/Code/code-III.md)
+    - [**Code Exam - I**](FrontEnd-Interview/Code/code-I.md)
+    - [**Code Exam - II**](FrontEnd-Interview/Code/code-II.md)
+    - [**Code Exam - III**](FrontEnd-Interview/Code/code-III.md)

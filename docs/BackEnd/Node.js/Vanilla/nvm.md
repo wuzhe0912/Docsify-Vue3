@@ -14,23 +14,23 @@ nvm --version
 ```
 ## nvm 指令
 透過`nvm`指令可以查詢或操作切換`Node.js`版本
-- 查詢遠端可安裝的`node`版本：
+查詢遠端可安裝的`node`版本：
 ```
 nvm ls-remote
 ```
-- 安裝所需要的`node`版本環境(LTS)：
+安裝所需要的`node`版本環境(LTS)：
 ```
 nvm install v14.15.4
 ```
-- 切換所需要使用的`node`版本：
+切換所需要使用的`node`版本：
 ```
 nvm use v14.15.4
 ```
-- 設定預設使用的`node`版本：
+設定預設使用的`node`版本：
 ```
 nvm alias default v14.15.4
 ```
-- 檢查`node`版本是否安裝成功：
+檢查`node`版本是否安裝成功：
 ```
 node -v
 npm -v
