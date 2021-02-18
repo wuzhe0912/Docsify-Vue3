@@ -5,7 +5,7 @@
 ## 安裝
 > require node.js >= v.12.13.0(2021/2/17)
 
-- [Tailwind CSS 官網](https://tailwindcss.com/)
+[Tailwind CSS 官網](https://tailwindcss.com/)
 ```
 cd project-folder
 yarn init
@@ -58,7 +58,7 @@ yarn tailwindcss build styles.css -o src/css/styles.css
 ```
 接著使用`Live Server`打開`index.html`，可以看到頁面上的文字，除了出現對應的藍色，同時也出現對應的`margin-left`和字體大小。
 ## Extensions
-- [Tailwind CSS IntelliSense(語法提示)](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+[Tailwind CSS IntelliSense(語法提示)](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 ## 斷點設定
 在`tailwindcss`中，使用`sm、md、lg、xl、2xl`等作為斷點：
 ```
@@ -70,4 +70,22 @@ yarn tailwindcss build styles.css -o src/css/styles.css
 ></div>
 ```
 從上面可以看到，基於`mobile first`的原理，所以初始的樣式先從小尺寸開始，接著隨著裝置螢幕大小的改變，當來到`768px`也就是`md:`尺寸時換成藍色並且加大，接著來到`1024px`時也是同理。
-- [Responsive Design](https://tailwindcss.com/docs/responsive-design)
+[Responsive Design](https://tailwindcss.com/docs/responsive-design)
+## 組件化
+同一個元件可能多次複用，但如果都寫在`template`或`html`上面，會顯得非常累贅，因此也可以改寫為`component`的形式：
+```
+<!-- index.html -->
+<button class="btn-blue">Button</button>
+```
+```
+<!-- styles.css -->
+@layer components {
+  .btn-blue {
+    @apply bg-blue-500 text-white font-bold;
+  }
+  .btn-blue:hover {
+    @apply bg-green-500;
+  }
+}
+```
+在`tailwindcss`中建立擴充`class`時，需要套上`@layer`，而`@apply`則是其專屬的寫法，有點類似繼承的感覺。在`css`書寫完後，記得需要重新編譯一次，即可生效。

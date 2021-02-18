@@ -3,6 +3,7 @@
   - **CSS**
     - **Tailwind CSS**
       - [**基礎應用**](FrontEnd/CSS/TailwindCSS/basic.md)
+      - [**Layout**](FrontEnd/CSS/TailwindCSS/layout.md)
   - **JavaScript**
     - **原生語法與實作**
       - [**Counter(計數器)**](FrontEnd/JavaScript/Vanilla/js-counter.md)
@@ -46,7 +47,7 @@
 - **Database**
   - **MySQL**
     - **語法與實作**
-      - [**環境安裝**](DataBase/MySQL/install.md)
+      - [**環境安裝**](Database/MySQL/install.md)
 <!-- 編輯器 -->
 - **IDE**
   - **Visual Studio Code**
