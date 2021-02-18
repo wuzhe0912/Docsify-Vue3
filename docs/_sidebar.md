@@ -17,6 +17,8 @@
       - [**Spread & Rest(展開與其餘)**](FrontEnd/JavaScript/ES6/spread-rest.md)
       - [**字符模板**](FrontEnd/JavaScript/ES6/template-strings.md)
       - [**ES Modules**](FrontEnd/JavaScript/ES6/es-modules.md)
+  - **TypeScript**
+    - [**Video 播放器**](FrontEnd/TypeScript/video.md)
   - **Vue.js**
     - **2.x**
     - **3.x**
@@ -51,7 +53,8 @@
 <!-- 編輯器 -->
 - **IDE**
   - **Visual Studio Code**
-    - [**Setting**](IDE/VSCode/vscode-setting.md)
+    - [**Extensions**](IDE/VSCode/extensions.md)
+    - [**Setting**](IDE/VSCode/setting.md)
 <!-- 面試 -->
 - **FrontEnd Interview**
   - **Concept**

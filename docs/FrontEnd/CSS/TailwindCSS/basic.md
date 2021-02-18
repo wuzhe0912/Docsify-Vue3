@@ -89,3 +89,4 @@ yarn tailwindcss build styles.css -o src/css/styles.css
 }
 ```
 在`tailwindcss`中建立擴充`class`時，需要套上`@layer`，而`@apply`則是其專屬的寫法，有點類似繼承的感覺。在`css`書寫完後，記得需要重新編譯一次，即可生效。
+## 間距
