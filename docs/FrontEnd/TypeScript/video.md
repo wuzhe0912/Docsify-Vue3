@@ -77,6 +77,8 @@ module.exports = {
 module.exports = {
   // ...
   devServer: {
+    contentBase: path.join(__dirname, 'dist'), // root
+    open: true, // auto open browsers
     compress: true,
     port: 3002
   },
@@ -186,4 +188,31 @@ module.exports = {
     ],
   },
 };
+```
+
+## Support TypeScript
+安裝插件：
+```
+npm i -D ts-loader typescript
+```
+設定：
+```
+{
+  test: /\.ts$/,
+  use: ['ts-loader'],
+  exclude: /node_modules/
+}
+```
+建立`tsconfig.json`
+```
+{
+  "compilerOptions": {
+    "module": "ES6",
+    "target": "ES5"
+  }
+}
+```
+匯入`ts`文件時，不寫副檔名，但這樣會導致`webpack`無法識別非`js、json`的文件，因此需要在`resolve`設定：
+```
+
 ```
