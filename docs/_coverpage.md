@@ -2,7 +2,7 @@
 
 # Docsify <small>© 2021 Pitt</small>
 
-> 紀錄工作與學習使用的筆記
+> Interview note
 
 <p>
   👀 總到訪量：<span id="busuanzi_value_site_pv"></span>

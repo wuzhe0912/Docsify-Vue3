@@ -1,12 +1,23 @@
 <!-- 前端 -->
-- **FrontEnd**
+- **前端面試**
+  - **JavaScript**
+  - **框架特性**
+    - [**基礎觀念題型**](FrontEnd-Interview/Framework/concept.md)
+  - **Vue.js**
+    - [**API**](FrontEnd-Interview/Vue.js/api.md)
+    - [**基礎觀念題型**](FrontEnd-Interview/Vue.js/concept.md)
+    - [**Vuex**](FrontEnd-Interview/Vue.js/vuex.md)
+    - [**Vue Router**](FrontEnd-Interview/Vue.js/vue-router.md)
+  - **React**
+- **前端**
   - **CSS**
     - **Tailwind CSS**
       - [**基礎應用**](FrontEnd/CSS/TailwindCSS/basic.md)
       - [**Layout**](FrontEnd/CSS/TailwindCSS/layout.md)
   - **JavaScript**
     - **原生語法與實作**
-      - [**Counter(計數器)**](FrontEnd/JavaScript/Vanilla/js-counter.md)
+      - [**基礎語法**](FrontEnd/JavaScript/Vanilla/grammar.md)
+      - [**Counter(實作計數器)**](FrontEnd/JavaScript/Vanilla/counter.md)
     - **需求解法**
       - [**重組多層陣列**](FrontEnd/JavaScript/Solution/array-operating.md)
     - **ES6**
@@ -30,8 +41,9 @@
   - **React**
     - [**React 基礎語法**](FrontEnd/React/grammar.md)
     - [**實作網速單位轉換**](FrontEnd/React/speed.md)
+
 <!-- 後端 -->
-- **BackEnd**
+<!-- - **BackEnd**
   - **Node.js**
     - [**NVM 安裝**](BackEnd/Node.js/Vanilla/nvm.md)
     - [**基礎語法**](BackEnd/Node.js/Vanilla/grammar.md)
@@ -44,21 +56,25 @@
       - [**Composer**](BackEnd/PHP/Laravel/composer.md)
       - [**陣列操作**](BackEnd/PHP/Laravel/operating.md)
     - **WordPress**
-      - [**專案建立**](BackEnd/PHP/WordPress/init-project.md)
+      - [**專案建立**](BackEnd/PHP/WordPress/init-project.md) -->
+
 <!-- 資料庫 -->
-- **Database**
+<!-- - **Database**
   - **MySQL**
     - **語法與實作**
-      - [**環境安裝**](Database/MySQL/install.md)
+      - [**環境安裝**](Database/MySQL/install.md) -->
+
 <!-- 編輯器 -->
 - **IDE**
   - **Visual Studio Code**
     - [**Extensions**](IDE/VSCode/extensions.md)
     - [**Setting**](IDE/VSCode/setting.md)
+
 <!-- 計算機概論 -->
-- **Computer**
+<!-- - **Computer**
   - **概論**
-    - [**認識 WWW**](Computer/www.md)
+    - [**認識 WWW**](Computer/www.md) -->
+
 <!-- 面試 -->
 - **FrontEnd Interview**
   - **Concept**
@@ -71,7 +87,6 @@
     - **JavaScript**
       - [**JavaScript - I**](FrontEnd-Interview/JavaScript/javascript-I.md)
     - **Vue.js**
-      - [**Vue.js 2.x - I**](FrontEnd-Interview/Vue.js(2.x)/vue.js-I.md)
       - [**Vue.js 2.x - II**](FrontEnd-Interview/Vue.js(2.x)/vue.js-II.md)
   - **Code**
     - [**Code Exam - I**](FrontEnd-Interview/Code/code-I.md)
