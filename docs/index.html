@@ -1,78 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Pitt Wu's Docsify Blog</title>
-  <link rel="icon" href="_media/favicon.ico" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <!-- Google Search Console -->
-  <meta name="google-site-verification" content="Ek_533sN_TjpQK4y9UVYsb-8I73r9Ipw7BFLvpZe0Qw">
-  <!-- Themes change -->
-  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css"> -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-</head>
-<body>
-  <div id="app"></div>
-  <script src="./js/index.js"></script>
-  <!-- docsify (latest v4.x.x)-->
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-  <!-- docsify-tabs (latest v1.x.x) -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-  <!-- emoji -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-  <!-- 字數統計 -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
-  <!-- 前後分頁 -->
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <!-- search -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MMW5V7NW8N"></script>
-  <!-- Clipboard Code -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <!-- Go to Top -->
-  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.goup.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $.goup({
-        trigger: 100,
-        bottomOffset: 52,
-        locationOffset: 25,
-        titleAsText: true
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pitt Wu's Interview Note with Docsify</title>
+    <link rel="icon" href="_media/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <!-- Google Search Console -->
+    <meta
+      name="google-site-verification"
+      content="Ek_533sN_TjpQK4y9UVYsb-8I73r9Ipw7BFLvpZe0Qw"
+    />
+    <!-- Themes change -->
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/buble.css"> -->
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./js/index.js"></script>
+    <!-- docsify (latest v4.x.x)-->
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+    <!-- docsify-tabs (latest v1.x.x) -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+    <!-- emoji -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+    <!-- 字數統計 -->
+    <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+    <!-- 前後分頁 -->
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <!-- search -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-MMW5V7NW8N"
+    ></script>
+    <!-- Clipboard Code -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+    <!-- Go to Top -->
+    <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.goup.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $.goup({
+          trigger: 100,
+          bottomOffset: 52,
+          locationOffset: 25,
+          titleAsText: true,
+        });
       });
-    });
-  </script>
-  <!-- 訪問人數統計 -->
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <!-- Use Gitter & Sidecar Create IM Chat -->
-  <script>
-    ((window.gitter = {}).chat = {}).options = {
-      room: 'docsify-pitt/community'
-    };
-  </script>
-  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-  <!-- Sidebar Collapse -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-  <!-- Gitalk -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <script>
-    const gitalk = new Gitalk({
-      clientID: '49e360f1c3a5006fb8c6',
-      clientSecret: '7cdcc9b9bd67063524d4049864cd9458321f0868',
-      repo: 'docsify-blog',
-      owner: 'wuzhe0912',
-      admin: ['wuzhe0912'],
-      id: location.pathname,      // Ensure uniqueness and length less than 50
-      distractionFreeMode: false
-    });
-  </script>
-  <!-- Footer -->
-  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
-</body>
+    </script>
+    <!-- 訪問人數統計 -->
+    <script
+      async
+      src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+    ></script>
+    <!-- Use Gitter & Sidecar Create IM Chat -->
+    <script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'docsify-pitt/community',
+      };
+    </script>
+    <script
+      src="https://sidecar.gitter.im/dist/sidecar.v1.js"
+      async
+      defer
+    ></script>
+    <!-- Sidebar Collapse -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+    <!-- Gitalk -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script>
+      const gitalk = new Gitalk({
+        clientID: '49e360f1c3a5006fb8c6',
+        clientSecret: '7cdcc9b9bd67063524d4049864cd9458321f0868',
+        repo: 'interview-docsify',
+        owner: 'wuzhe0912',
+        admin: ['wuzhe0912'],
+        id: location.pathname, // Ensure uniqueness and length less than 50
+        distractionFreeMode: false,
+      });
+    </script>
+    <!-- Footer -->
+    <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+  </body>
 </html>

@@ -11,5 +11,5 @@
   🚴‍♂️ 總訪問人數：<span id="busuanzi_value_site_uv"></span>
 </p>
 
-[GitHub](https://github.com/wuzhe0912/docsify-blog)
+[GitHub](https://github.com/wuzhe0912/interview-docsify)
 [Get Started](#Docsify)
