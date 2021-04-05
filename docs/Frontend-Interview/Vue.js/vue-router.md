@@ -14,23 +14,32 @@
 
 - `router.replace()`：替換掉目前這一頁
 
-### Navigation Guards(導航守衛)
+### Navigation Guards(路由守衛)
 - `router.beforeEach`：常見的用法，譬如檢查目前前往的頁面是否需要登入狀態，若是已登入帶有`token`，則正常進入`next()`，反之則退到需求要求的頁面，譬如`login`。
 
 - `beforeEnter`：在特定的`route`內，依照需求決定是否要觸發`function`，或前往指定的頁面。
 
-## 3. hash mode 和 history mode 的差異
+## 3. 承上題 Vue 有幾種路由守衛？
+- `router.beforeEach`：註冊在全域的`router`檢測，`to`代表要前往的`router`，`from`則是來自哪裡？`next`選擇調用的方法，常見是選擇前往某頁面或是選擇中斷。
+- `router.beforeEnter`：參數同`router.beforeEach`相同，但使用在單一的`router`內。
+- 下述守衛則較少使用：
+  - `router.beforeResolve`
+  - `router.beforeRouteEnter`
+  - `router.beforeRouteUpdate`
+  - `router.beforeRouteLeave`
+
+## 4. hash mode 和 history mode 的差異
 當設置`hash`模式時，網址會多出一個`#`，而`history`則沒有，從畫面上來看，設置`history`比較合理，畢竟除了網址比較美化外，對`SEO爬蟲`也有影響，但設置`history`模式需要後端配合設定`url rewrite`，具體的設定方式附在[官網 HTML5 History Mode](https://router.vuejs.org/guide/essentials/history-mode.html#example-server-configurations)，換言之，如果後端不願意配合，那就只能退而求其次使用`hash`模式。
 
 當後端沒有配合設置的狀況下，為什麼使用`hash`模式可行？因為網址列中的`#`，在它後面的內容不會經過`server`端，單純只會在`client`處理，因此不受影響。
 
 使用情境：倘若專案本身是用來搭建`後台CMS`，其實`hash`模式亦不受影響，因為網址美醜不影響使用者。反之，如果今天是產品網頁，會面向一般使用者，則需要配合使用`history`模式。
 
-## 4. vue-router 總共有幾種模式？
+## 5. vue-router 總共有幾種模式？
 除了前述的兩種模式外，還有一種`abstract`模式，主要使用在`node.js`，當發現環境沒有瀏覽器支援時，會被強制切換到這個模式，所以總共是`3`種模式。
 
 
-## 5. route 和 router 有何不同？
+## 6. route 和 router 有何不同？
 - `route`：
 本身是一個物件，這個物件內容包含了路由本身的所有資訊，諸如`name、meta、path、query`，所以可以印出參數或是路徑，我們可以透過進入這個頁面時拿到資料參數，決定是否觸發`function`。
 

@@ -39,6 +39,14 @@
   - `destroyed` => `onUnmounted`
   - `errorCaptured` => `onErrorCaptured`
 
+## 2. created 和 mounted 的差異？
+> 兩者的最大的差異，還是在於掛載的順序，以及在各階段資料的狀態。
+
+- `beforeCreate`：在這個階段`$el`和`$data`都尚未掛載 => `undefined`。
+- `created`：`$data`初始資料已載入，`$el`尚未掛載成功 => `undefined`。
+- `beforeMount`：`$el`依然為空 => `undefined`。
+- `mounted`：`$el`掛載完成，渲染出現資料。
+
 ## 3. 雙向綁定原理是如何實現的(2.x)？
 > 主要拆解為四個步驟：
 
@@ -47,15 +55,3 @@
 3. 根據數據的變化，再透過訂閱-發布者模式，來觸發`watch`，進而改變虛擬`DOM`。
 4. 最後，再根據已經改變的虛擬`DOM`，重新渲染頁面的`DOM`結構，達到雙向綁定的目的。
 
-## 4. created 和 mounted 的差異？
-> 兩者的最大的差異，還是在於掛載的順序，以及在各階段資料的狀態。
-
-- `beforeCreate`：在這個階段`$el`和`$data`都尚未掛載 => `undefined`。
-- `created`：`$data`初始資料已載入，`$el`尚未掛載成功 => `undefined`。
-- `beforeMount`：`$el`依然為空 => `undefined`。
-- `mounted`：`$el`掛載完成，渲染出現資料。
-
-## 5. 為什麼說 vue 是單向資料傳遞？
-因為`vue`的父子組件傳值中，父組件可以送資料給子組件，但子組件只能接收不能傳資料給父組件，不過子組件可以透過`@emit`方法，促使父組件執行函式來改變狀態。
-
-舉例來說，彈窗效果`(modal)`我們通常會封裝到`component`內，每個頁面需要顯示彈窗內容都會有差異，譬如 `title`可能就有落差，那`title`的資料就得透過父組件傳過去。但是如果我們想要關閉彈窗，代表我們想改變狀態，這時候`modal`就可以透過`@emit="boxSwitch"`往上傳，父組件拿到後就會執行`methods`內的`function`來改變當前的狀態，達到關閉彈窗的效果。

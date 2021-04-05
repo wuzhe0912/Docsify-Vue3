@@ -3,6 +3,7 @@
 > 業務場景，需將原始陣列中的值進行過濾，重組後提到第一層，再重組第二層的子陣列。
 
 ## 原始陣列
+
 ```
 const studentList = [
   {
@@ -32,7 +33,9 @@ const studentList = [
   },
 ];
 ```
+
 ## 預期結果
+
 ```
 const classRoster = [
   {
@@ -57,7 +60,9 @@ const classRoster = [
   },
 ];
 ```
-## 解法
+
+## 解法：
+
 ```
 // 整理重複班別名稱
 let target = []

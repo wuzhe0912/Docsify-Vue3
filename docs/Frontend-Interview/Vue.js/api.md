@@ -13,8 +13,151 @@
 
 另外，`key`作為唯一值時，對`vue`的底層虛擬`DOM`渲染也有幫助(涉及`diff`演算法)，當擁有唯一值時，即便陣列或物件中加入新的資料，也可以避免重複渲染的問題，對效能提升有幫助。
 
-## 3. computed 和 watch 的差異？
+## 3. 如何實作 v-model？
+
+### `2.x`版本
+```
+<!-- template -->
+<template lang="pug">
+  .container
+    input(type="text" placeholder="type something" v-model="text")
+    div {{ text }}
+</template>
+```
+```
+<!-- script -->
+<script>
+export default {
+  data: () => ({
+    text: '',
+  }),
+};
+</script>
+```
+
+### `3.x`版本
+#### `ref()`寫法：
+```
+<!-- template -->
+<template lang="pug">
+.container
+  input(type="text" placeholder="type something" v-model="todo")
+  div {{ todo }}
+</template>
+```
+```
+<!-- script -->
+<script>
+import { ref } from 'vue';
+
+export default {
+  name: 'Demo',
+  setup() {
+    const todo = ref('');
+
+    return { todo };
+  },
+};
+</script>
+```
+#### `reactive()`寫法：
+```
+<!-- template -->
+<template lang="pug">
+.container
+  input(type="text" placeholder="type something" v-model="state.todo")
+  div {{ state.todo }}
+</template>
+```
+```
+<script>
+<!-- script -->
+import { reactive } from 'vue';
+
+export default {
+  name: 'Demo',
+  setup() {
+    const state = reactive({
+      todo: '',
+    });
+
+    return { state };
+  },
+};
+</script>
+```
+#### 使用`toRefs()`優化`reactive()`寫法：
+```
+<!-- template -->
+<template lang="pug">
+.container
+  input(type="text" placeholder="type something" v-model="todo")
+  div {{ todo }}
+</template>
+```
+```
+<!-- script -->
+<script>
+import { reactive, toRefs } from 'vue';
+
+export default {
+  name: 'Demo',
+  setup() {
+    const state = reactive({
+      todo: '',
+    });
+
+    return { ...toRefs(state) };
+  },
+};
+</script>
+```
+
+## 4. computed 和 watch 的差異？
 `computed`除了計算屬性的特性外，其主要目的是為了在目前已有的資料上進行更新，所以本身帶有緩存的特性。相反的`watch`則是監聽資料的變化，因此每次監聽時都是初始化的狀況。如果某筆資料必須相依另外一筆資料的話，則使用`computed`，但如果只是要監聽資料變化時，則使用`watch`。
 
-## 4. 簡單說一下 slot 是什麼？
-基本操作和`component`雷同，載入需要插入的`component`，再透過父子組件傳值，差別在於，接受傳值的子組件需要在`template`上使用`slot`標籤，這個標籤內的內容，則會渲染父組件傳過來的子內容或子節點，內容在父組件會使用雙花括號包裹。當然如果父組件沒有傳值，也可以直接使用子組件的資料來顯示。
+## 5. 什麼是 Vue.use()?
+如果我們有安裝依賴在`Vue`的套件，可以透過`Vue.use()`的方法，把套件註冊到全域環境，讓其他`component` 可以直接使用，而不需要每頁都`import`該插件。
+
+## 6. keep-alive 的用法
+可以理解為一種暫存資料的方式，假設後台有一些表單需要填寫時，可能使用者會需要來回切換不同區塊，這時候會導致原先填寫到一半的資料消失，透過`keep-alive`去包裹，可以暫時存放資料，優化使用體驗。
+
+### 實作
+準備兩個組件，一個組件單純顯示列表，另一個組件則顯示`textarea`，並在引入組件時進行動態渲染，接著使用`keep-alive`進行包裹，現在我們點擊兩個`button`進行切換，可以看到組件正常來回切換顯示。
+
+接著我們在`textarea`中輸入一些內容，並再次進行切換，依然可以我們看到剛剛輸入的內容被暫存下來，這就是`keep-alive`用法。
+```
+<!-- template -->
+<template lang="pug">
+.container
+  v-btn(@click="handle('List')") List
+  v-btn(@click="handle('Form')") Form
+  keep-alive
+    component(:is="content") 
+</template>
+```
+```
+<!-- script -->
+<script>
+import List from '../components/list';
+import Form from '../components/form';
+
+export default {
+  name: 'Video',
+  components: {
+    List,
+    Form,
+  },
+
+  data: () => ({
+    content: 'List',
+  }),
+
+  methods: {
+    handle(value) {
+      this.content = value;
+    },
+  },
+};
+</script>
+```
