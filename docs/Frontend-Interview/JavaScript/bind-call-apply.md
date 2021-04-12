@@ -1,6 +1,22 @@
 # bind、call、apply
 
-## 1. 請列出下列 console.log() 結果
+## 1. call 和 apply 差異在哪？
+
+- `call`可以傳入任何參數，包含物件或陣列，同時不限制傳述的參數數量，只是參數間需用逗號隔開。
+
+```
+function solve(a, b) {
+  console.log(this);
+  console.log(a, b);
+}
+
+solve.call([1, 2, 3], 10, 'string');
+```
+
+- `apply`只接受兩個參數，第二個必須為`array`，陣列中的值則會變成參數的形式。
+- 需要特別注意這兩者的第一個參數，因為該參數會改變`function()`中`this`的值。
+
+## 2. 請列出下列 console.log() 結果
 
 ```
 function sayPlayerName() {
@@ -27,7 +43,7 @@ Warlock
 Warrior
 ```
 
-## 2. 請列出下列 console.log() 結果
+## 3. 請列出下列 console.log() 結果
 
 ```
 var num = 10;
